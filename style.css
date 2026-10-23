@@ -1,5 +1,5 @@
-/* ivkoroni.se — set like Radion's Newspaper style: paper stock, true ink,
-   one signal colour, hairline rules. Follows the reader's light/dark setting. */
+/* ivkoroni.github.io: set like Radion's Newspaper style. Paper stock, true ink,
+   one signal colour, hairline rules. Follows the reader's light or dark setting. */
 
 :root {
     --canvas: #FAF9F6;
@@ -223,9 +223,10 @@ details summary::after {
     float: right;
     color: var(--ink-faint);
     font-weight: 400;
+    transition: transform 0.2s ease;
 }
 
-details[open] summary::after { content: "–"; }
+details[open] summary::after { transform: rotate(45deg); }
 
 details > *:not(summary) { margin-top: 0; }
 
@@ -239,7 +240,11 @@ footer {
     font-size: 13px;
 }
 
-footer a { color: var(--ink-muted); }
+footer a { color: var(--ink-muted); margin-left: 16px; }
+
+.lede.intro { margin-top: 28px; }
+
+.links a:not(:last-child) { margin-right: 18px; }
 
 @media (max-width: 520px) {
     body { font-size: 16px; }
