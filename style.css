@@ -240,7 +240,9 @@ footer {
     font-size: 13px;
 }
 
-footer a { color: var(--ink-muted); margin-left: 16px; }
+footer a { color: var(--ink-muted); }
+
+footer a + a { margin-left: 16px; }
 
 .lede.intro { margin-top: 28px; }
 
