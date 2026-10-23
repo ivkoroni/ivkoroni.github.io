@@ -4,31 +4,67 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IV Koroni</title>
-    <meta name="description" content="Apps for iPhone and Apple Watch, made by IV Koroni in Sweden.">
+    <meta name="description" content="Apps by IV Koroni for iPhone, iPad, Mac and Apple Watch.">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <div class="page">
 
-    <header>
-        <div class="masthead">
-            <div>
-                <div class="masthead-title"><a href="/">IV Koroni</a></div>
-            </div>
-        </div>
+    <header class="home-head">
+        <h1 class="wordmark"><a href="/">IV Koroni</a></h1>
+        <p class="home-sub">Apps by IV Koroni</p>
     </header>
 
     <main>
-        <p class="lede intro">IV Koroni makes small, independent apps in Sweden. Here they are.</p>
+        <h2 class="shelf-title">Apps</h2>
 
-        <span class="overline">Apps</span>
+        <ul class="shelf">
 
-        <h2 style="border-top: none; padding-top: 0; margin-top: 8px;"><a href="/radion/" style="color: inherit; text-decoration: none;">Radion</a></h2>
-        <p>Live radio from all over the world, with thousands of stations to choose from. It works on iPhone, iPad, Mac, Apple Watch and CarPlay.</p>
-        <p class="links"><a href="/radion/">About Radion</a> <a href="/radion/support/">Support</a> <a href="/radion/privacy/">Privacy Policy</a></p>
+            <li class="app">
+                <picture>
+                    <source srcset="/radion/icon-dark.png" media="(prefers-color-scheme: dark)">
+                    <img class="app-icon" src="/radion/icon-light.png" alt="" width="96" height="96">
+                </picture>
+                <div class="app-body">
+                    <h3 class="app-name"><a href="/radion/">Radion</a></h3>
+                    <p class="app-tagline">Every radio, one dial.</p>
+                    <p class="app-devices">iPhone, iPad, Mac, Apple Watch and CarPlay</p>
+                    <p class="app-actions">
+                        <a class="store-button" href="https://apps.apple.com/app/radion/id6792465378">Download on the App Store</a>
+                        <a href="/radion/support/">Support</a>
+                        <a href="/radion/privacy/">Privacy</a>
+                    </p>
+                </div>
+            </li>
+
+            <!--
+            FERRON: when it launches, remove these comment lines and fill in the
+            App Store link. Put its pages in a /ferron/ folder, the same way as
+            /radion/ (icon-light.png, icon-dark.png, support/, privacy/).
+
+            <li class="app">
+                <picture>
+                    <source srcset="/ferron/icon-dark.png" media="(prefers-color-scheme: dark)">
+                    <img class="app-icon" src="/ferron/icon-light.png" alt="" width="96" height="96">
+                </picture>
+                <div class="app-body">
+                    <h3 class="app-name"><a href="/ferron/">Ferron</a></h3>
+                    <p class="app-tagline">Kettlebell and conditioning workouts.</p>
+                    <p class="app-devices">iPhone and Apple Watch</p>
+                    <p class="app-actions">
+                        <a class="store-button" href="https://apps.apple.com/app/ferron/idXXXXXXXXXX">Download on the App Store</a>
+                        <a href="/ferron/support/">Support</a>
+                        <a href="/ferron/privacy/">Privacy</a>
+                    </p>
+                </div>
+            </li>
+            -->
+
+        </ul>
     </main>
 
     <footer>
+        <span>© 2026 IV Koroni</span>
         <a href="mailto:ivkoroni@gmail.com">ivkoroni@gmail.com</a>
     </footer>
 

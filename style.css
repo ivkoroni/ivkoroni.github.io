@@ -233,6 +233,9 @@ details > *:not(summary) { margin-top: 0; }
 details > p:last-child, details > ul:last-child { padding-bottom: 8px; }
 
 footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
     margin-top: 60px;
     padding-top: 16px;
     border-top: 2px solid var(--rule-strong);
@@ -242,14 +245,129 @@ footer {
 
 footer a { color: var(--ink-muted); }
 
-footer a + a { margin-left: 16px; }
+a:focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
 
-.lede.intro { margin-top: 28px; }
+/* Landing page: the studio wordmark, then a shelf of apps.
+   Add an app by copying one <li class="app"> block in index.html. */
 
-.links a:not(:last-child) { margin-right: 18px; }
+.home-head {
+    padding-bottom: 22px;
+    border-bottom: 2px solid var(--rule-strong);
+}
+
+.wordmark {
+    margin: 0;
+    font-size: clamp(56px, 14vw, 104px);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+}
+
+.wordmark a { color: inherit; text-decoration: none; }
+
+.home-sub {
+    margin: 12px 0 0;
+    color: var(--ink-muted);
+    font-size: 17px;
+}
+
+.shelf-title {
+    margin: 40px 0 0;
+    padding: 0;
+    border: 0;
+    color: var(--ink-muted);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.shelf {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    position: relative;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    margin: 0;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.app:last-child { border-bottom: 0; }
+
+.app picture { flex: none; }
+
+.app-icon {
+    display: block;
+    width: 96px;
+    height: 96px;
+    border-radius: 22.5%;
+    box-shadow: 0 0 0 1px var(--rule);
+}
+
+.app-body { min-width: 0; }
+
+.app-name {
+    margin: 2px 0 2px;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+/* The app name's link covers the whole row, so the row is one big target.
+   The buttons and links inside sit above it and stay clickable on their own. */
+.app-name a { color: inherit; text-decoration: none; }
+.app-name a::after { content: ""; position: absolute; inset: 0; }
+.app:hover .app-name a { color: var(--signal); }
+
+.app-tagline {
+    margin: 0 0 2px;
+    font-size: 18px;
+}
+
+.app-devices {
+    margin: 0 0 16px;
+    color: var(--ink-muted);
+    font-size: 14px;
+}
+
+.app-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 20px;
+    margin: 0;
+    font-size: 15px;
+}
+
+.app-actions a { position: relative; z-index: 1; }
+
+.store-button {
+    display: inline-block;
+    padding: 9px 16px;
+    background: var(--ink);
+    color: var(--canvas);
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.store-button:hover { background: var(--signal); }
 
 @media (max-width: 520px) {
     body { font-size: 16px; }
     .page { padding-top: 32px; }
     table { font-size: 14px; }
+    .app { gap: 16px; }
+    .app-icon { width: 68px; height: 68px; }
+    .app-name { font-size: 24px; }
 }
