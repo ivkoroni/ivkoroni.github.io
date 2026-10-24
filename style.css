@@ -26,6 +26,20 @@
     }
 }
 
+/* Ferron's pages are always dark, like the app, with Ferron red as the
+   signal colour. Add class="always-dark" to a page's <html> to use it. */
+:root.always-dark {
+    --canvas: #0A0A0B;
+    --panel: #1F1F24;
+    --ink: #F4F4F6;
+    --ink-muted: #93939B;
+    --ink-faint: #5A5A62;
+    --rule: rgba(244, 244, 246, 0.11);
+    --rule-strong: rgba(244, 244, 246, 0.20);
+    --signal: #E8473A;
+    color-scheme: dark;
+}
+
 * { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
